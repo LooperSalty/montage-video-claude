@@ -1,0 +1,182 @@
+{
+  "id": "jessop",
+  "episode": 2,
+  "title": "La femme qui a survécu au Titanic… et à deux autres catastrophes",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+15%",
+  "grade": "archive",
+  "music": {
+    "src": "music/lightless_dawn.mp3",
+    "volume": 0.13
+  },
+  "hook": [
+    "3 CATASTROPHES",
+    "1 SURVIVANTE"
+  ],
+  "beats": [
+    {
+      "text": "Cette femme a survécu au naufrage du Titanic. Et ce n'est même pas le plus fou de son histoire.",
+      "img": "violet",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "sfx": [
+        {
+          "src": "sfx/impact.mp3",
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "text": "Elle s'appelle Violet Jessop. Hôtesse de bord sur les plus grands paquebots du monde.",
+      "img": "violet",
+      "mode": "card",
+      "label": "VIOLET JESSOP · INFIRMIÈRE VAD"
+    },
+    {
+      "text": "Septembre 1911. Elle travaille sur l'Olympic, le jumeau du Titanic. Au large de Southampton, un croiseur de guerre l'éperonne.",
+      "img": "olympic_hawke",
+      "mode": "card",
+      "label": "OLYMPIC & HMS HAWKE · 1911",
+      "stamp": {
+        "text": "1911",
+        "on": "1911"
+      }
+    },
+    {
+      "text": "Coque éventrée. Mais le navire tient, et personne ne meurt.",
+      "img": "olympic_degats",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "label": "LA COQUE DE L'OLYMPIC",
+      "stamp": {
+        "text": "CATASTROPHE Nº1",
+        "on": "tient"
+      }
+    },
+    {
+      "text": "Avril 1912. Violet embarque sur le Titanic, le paquebot qu'on dit insubmersible. Quatre jours plus tard : l'iceberg.",
+      "img": "titanic_depart",
+      "mode": "card",
+      "label": "DÉPART DU TITANIC · 10 AVRIL 1912",
+      "stamp": {
+        "text": "1912",
+        "on": "1912"
+      }
+    },
+    {
+      "text": "Elle monte dans le canot numéro 16. Selon ses mémoires, un officier lui confie un bébé.",
+      "img": "canots",
+      "mode": "card",
+      "label": "CANOTS DU TITANIC · 15 AVRIL 1912",
+      "stamp": {
+        "text": "CANOT 16",
+        "on": "16"
+      }
+    },
+    {
+      "text": "Plus de 1500 personnes meurent cette nuit-là. Elle, elle survit.",
+      "img": "titanic_naufrage",
+      "mode": "cover",
+      "focus": [
+        0.55,
+        0.5
+      ],
+      "stamp": {
+        "text": "CATASTROPHE Nº2",
+        "on": "survit"
+      }
+    },
+    {
+      "text": "N'importe qui aurait arrêté la mer. Pas elle.",
+      "img": "violet",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "text": "1916. En pleine guerre, elle devient infirmière sur le Britannic, le troisième navire de la série, devenu navire-hôpital.",
+      "img": "britannic",
+      "mode": "card",
+      "label": "HMHS BRITANNIC · NAVIRE-HÔPITAL",
+      "stamp": {
+        "text": "1916",
+        "on": "1916"
+      }
+    },
+    {
+      "text": "En mer Égée, il heurte une mine allemande. Il coule en 55 minutes.",
+      "img": "britannic_moudros",
+      "mode": "card",
+      "label": "LE BRITANNIC · OCTOBRE 1916",
+      "stamp": {
+        "text": "55 MINUTES",
+        "on": "minutes"
+      },
+      "sfx": [
+        {
+          "src": "sfx/hit.mp3",
+          "volume": 0.4,
+          "on": "mine"
+        }
+      ]
+    },
+    {
+      "text": "Son canot est aspiré vers les hélices. Violet saute à l'eau, se cogne la tête contre la coque… et survit encore.",
+      "img": "britannic_pont",
+      "mode": "card",
+      "label": "PONT DES CANOTS DU BRITANNIC",
+      "stamp": {
+        "text": "CATASTROPHE Nº3",
+        "on": "encore"
+      }
+    },
+    {
+      "text": "Trois catastrophes, sur trois navires jumeaux. Et elle a continué à naviguer jusqu'en 1950.",
+      "img": "titanic_naufrage",
+      "mode": "cover",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "text": "On l'appelle aujourd'hui Miss Insubmersible. Elle est morte à 83 ans… sur la terre ferme.",
+      "img": "violet",
+      "mode": "card",
+      "label": "VIOLET JESSOP (1887-1971)",
+      "stamp": {
+        "text": "MISS INSUBMERSIBLE",
+        "on": "Insubmersible"
+      },
+      "gap": 0.1
+    }
+  ],
+  "post": {
+    "caption": "Violet Jessop était à bord de l'Olympic, du Titanic ET du Britannic… et elle a survécu aux 3 catastrophes 😳\nAujourd'hui, on l'appelle Miss Insubmersible.\nTu serais remonté sur un bateau, toi ? 👇",
+    "hashtags": [
+      "#titanic",
+      "#histoirevraie",
+      "#violetjessop",
+      "#survie",
+      "#histoire",
+      "#naufrage",
+      "#anecdote",
+      "#culturegenerale",
+      "#apprendresurtiktok",
+      "#pourtantcestvrai"
+    ],
+    "sources": [
+      "https://fr.wikipedia.org/wiki/Violet_Jessop",
+      "https://en.wikipedia.org/wiki/Violet_Jessop",
+      "https://en.wikipedia.org/wiki/HMHS_Britannic"
+    ]
+  }
+}

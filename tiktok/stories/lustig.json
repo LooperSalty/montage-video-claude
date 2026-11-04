@@ -1,0 +1,174 @@
+{
+  "id": "lustig",
+  "episode": 1,
+  "title": "L'homme qui a vendu la tour Eiffel",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+15%",
+  "grade": "archive",
+  "music": {
+    "src": "music/investigations.mp3",
+    "volume": 0.1
+  },
+  "hook": [
+    "IL A VENDU",
+    "LA TOUR EIFFEL"
+  ],
+  "beats": [
+    {
+      "text": "En 1925, un homme a vendu la tour Eiffel. Et l'acheteur a payé.",
+      "img": "eiffel_foudre",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.45
+      ],
+      "stamp": {
+        "text": "1925",
+        "on": "1925"
+      },
+      "sfx": [
+        {
+          "src": "sfx/impact.mp3",
+          "volume": 0.55
+        }
+      ]
+    },
+    {
+      "text": "Il s'appelle Victor Lustig, et c'est l'un des plus grands escrocs de l'histoire.",
+      "img": "mugshot",
+      "mode": "cover",
+      "focus": [
+        0.62,
+        0.45
+      ],
+      "label": "VICTOR LUSTIG · FICHE DE POLICE"
+    },
+    {
+      "text": "Cette année-là, il lit dans le journal que la tour coûte une fortune à entretenir. Il a une idée.",
+      "img": "eiffel_nuit",
+      "mode": "card",
+      "label": "LA TOUR EIFFEL · 1914"
+    },
+    {
+      "text": "Il se fait passer pour un haut fonctionnaire, fabrique de faux papiers officiels, et réunit des ferrailleurs dans un palace parisien.",
+      "img": "crillon",
+      "mode": "card",
+      "label": "PLACE DE LA CONCORDE · PARIS"
+    },
+    {
+      "text": "Son secret d'État : la tour va être démontée. Plus de 7000 tonnes de fer, vendues au plus offrant.",
+      "img": "eiffel_1888",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.4
+      ],
+      "stamp": {
+        "text": "7 000 TONNES",
+        "on": "tonnes"
+      }
+    },
+    {
+      "text": "L'un d'eux mord à l'hameçon. Son nom… André Poisson.",
+      "img": "ferraille",
+      "mode": "card",
+      "label": "PARIS · ARCHIVES BnF",
+      "stamp": {
+        "text": "ANDRÉ POISSON",
+        "on": "Poisson"
+      }
+    },
+    {
+      "text": "Poisson paie, et ajoute même un pot-de-vin. Environ 70 000 francs.",
+      "img": "journal",
+      "mode": "card",
+      "label": "« THE SMOOTHEST CON MAN EVER BORN »",
+      "stamp": {
+        "text": "70 000 FRANCS",
+        "on": "francs"
+      },
+      "sfx": [
+        {
+          "src": "sfx/cash.mp3",
+          "volume": 0.45,
+          "on": "francs"
+        }
+      ]
+    },
+    {
+      "text": "Lustig file en Autriche avec l'argent. Et Poisson, trop humilié, ne porte même pas plainte.",
+      "img": "eiffel_foudre",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.15
+      ]
+    },
+    {
+      "text": "Alors Lustig revient… pour vendre la tour une deuxième fois. Cette fois, la police est prévenue. Il s'enfuit en Amérique.",
+      "img": "fiche",
+      "mode": "card",
+      "label": "FICHE DU BUREAU OF INVESTIGATION · 1931",
+      "stamp": {
+        "text": "2e TENTATIVE",
+        "on": "deuxième"
+      }
+    },
+    {
+      "text": "Là-bas, il soutire même de l'argent à Al Capone… en jouant les hommes honnêtes.",
+      "img": "capone",
+      "mode": "card",
+      "label": "AL CAPONE · 1930"
+    },
+    {
+      "text": "Arrêté pour fausse monnaie, il s'évade la veille de son procès. Repris, il finit à Alcatraz.",
+      "img": "faux_billet",
+      "mode": "card",
+      "label": "UN FAUX BILLET DE LUSTIG",
+      "stamp": {
+        "text": "ALCATRAZ",
+        "on": "Alcatraz"
+      }
+    },
+    {
+      "text": "Il meurt en prison en 1947. Sur son certificat de décès, à la ligne profession, on peut lire : vendeur apprenti.",
+      "img": "deces",
+      "mode": "card",
+      "label": "CERTIFICAT DE DÉCÈS · 1947",
+      "stamp": {
+        "text": "« APPRENTICE SALESMAN »",
+        "on": "apprenti"
+      }
+    },
+    {
+      "text": "L'homme qui a vendu la tour Eiffel… apprenti.",
+      "img": "mugshot",
+      "mode": "cover",
+      "focus": [
+        0.3,
+        0.45
+      ],
+      "gap": 0.1
+    }
+  ],
+  "post": {
+    "caption": "En 1925, Victor Lustig a vendu la tour Eiffel à un ferrailleur parisien… puis il a voulu recommencer 🤯\nL'une des plus grandes arnaques de l'histoire, jusqu'à Al Capone et Alcatraz.\nTu l'aurais achetée, toi ? 👇",
+    "hashtags": [
+      "#histoirevraie",
+      "#arnaque",
+      "#toureiffel",
+      "#victorlustig",
+      "#histoire",
+      "#paris",
+      "#anecdote",
+      "#culturegenerale",
+      "#apprendresurtiktok",
+      "#pourtantcestvrai"
+    ],
+    "sources": [
+      "https://fr.wikipedia.org/wiki/Victor_Lustig",
+      "https://en.wikipedia.org/wiki/Victor_Lustig",
+      "https://www.smithsonianmag.com/history/the-man-who-sold-the-eiffel-tower-twice-21384036/"
+    ]
+  }
+}

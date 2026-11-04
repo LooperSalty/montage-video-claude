@@ -1,0 +1,43 @@
+# Préréglages d'export FilmCraft (générés par scripts/gen_reference.py)
+
+Utiliser : file.exportMedia {path, preset: "<nom>", wait: true}.
+
+- `Match Source – Adaptive High Bitrate` — Match Source — h264
+- `Match Source – Adaptive Medium Bitrate` — Match Source — h264
+- `Match Source – Adaptive Low Bitrate` — Match Source — h264
+- `High Quality 1080p HD` — Web & Social — h264
+- `High Quality 2160p 4K` — Web & Social — h264
+- `YouTube 1080p Full HD` — Web & Social — h264
+- `YouTube 2160p 4K Ultra HD` — Web & Social — h264
+- `Vimeo 1080p Full HD` — Web & Social — h264
+- `Vimeo 2160p 4K Ultra HD` — Web & Social — h264
+- `Social Vertical 1080×1920` — Web & Social — h264
+- `Apple ProRes 422 HQ` — Broadcast — prores
+- `Apple ProRes 422` — Broadcast — prores
+- `Apple ProRes 422 LT` — Broadcast — prores
+- `Apple ProRes 422 Proxy` — Broadcast — prores
+- `Apple ProRes 4444` — Broadcast — prores
+- `Apple ProRes 4444 with Alpha` — Broadcast — prores
+- `Apple ProRes 4444 XQ` — Broadcast — prores
+- `Avid DNxHR HQ` — Broadcast — dnxhr
+- `Avid DNxHR SQ` — Broadcast — dnxhr
+- `Avid DNxHR LB` — Broadcast — dnxhr
+- `APV 422-10` — Broadcast — apv
+- `APV 422-12` — Broadcast — apv
+- `MXF OP1a DNxHR HQ` — Broadcast — mxf-op1a
+- `MXF OP1a ProRes 422 HQ` — Broadcast — mxf-op1a
+- `MXF OP1a H.264` — Broadcast — mxf-op1a
+- `MXF OP-Atom DNxHR (Avid)` — Broadcast — mxf-opatom
+- `PNG Sequence` — Image Sequence — png
+- `TIFF Sequence` — Image Sequence — tiff
+- `BMP Sequence` — Image Sequence — bmp
+- `JPEG Sequence` — Image Sequence — jpg
+- `Targa Sequence` — Image Sequence — tga
+- `DPX Sequence` — Image Sequence — dpx
+- `OpenEXR Sequence` — Image Sequence — exr
+- `Animated GIF 640×360` — Animated GIF — gif
+- `Waveform Audio 48 kHz 16-bit` — Audio Only — wav
+- `Waveform Audio 48 kHz 24-bit` — Audio Only — wav
+- `AIFF 48 kHz 16-bit` — Audio Only — aiff
+- `AAC Audio 48 kHz 320 kbps` — Audio Only — aac
+- `FLAC 48 kHz 24-bit` — Audio Only — flac

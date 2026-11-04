@@ -1,0 +1,199 @@
+{
+  "id": "emeus",
+  "episode": 3,
+  "title": "L'armée australienne contre les émeus",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+15%",
+  "grade": "archive",
+  "music": {
+    "src": "music/sneaky_snitch.mp3",
+    "volume": 0.09
+  },
+  "hook": [
+    "L'ARMÉE CONTRE",
+    "DES OISEAUX"
+  ],
+  "beats": [
+    {
+      "text": "En 1932, l'Australie a envoyé son armée contre des oiseaux. Et elle a perdu.",
+      "img": "emeu_tete",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.35
+      ],
+      "grade": "natural",
+      "stamp": {
+        "text": "1932",
+        "on": "1932"
+      },
+      "sfx": [
+        {
+          "src": "sfx/impact.mp3",
+          "volume": 0.5
+        }
+      ]
+    },
+    {
+      "text": "Après la Première Guerre mondiale, d'anciens soldats reçoivent des terres pour cultiver du blé.",
+      "img": "champ",
+      "mode": "card",
+      "label": "AUSTRALIE-OCCIDENTALE · 1932"
+    },
+    {
+      "text": "Mais en 1932, environ 20 000 émeus envahissent leurs champs. Ils mangent tout, et détruisent les clôtures.",
+      "img": "emeus_1932",
+      "mode": "card",
+      "label": "ÉMEUS · CAMPION, 1932",
+      "stamp": {
+        "text": "20 000 ÉMEUS",
+        "on": "émeus"
+      }
+    },
+    {
+      "text": "Les fermiers, qui sont d'anciens soldats, réclament une solution de soldats : des mitrailleuses.",
+      "img": "emeu_tete2",
+      "mode": "cover",
+      "focus": [
+        0.45,
+        0.4
+      ],
+      "grade": "natural",
+      "stamp": {
+        "text": "DES MITRAILLEUSES",
+        "on": "mitrailleuses"
+      }
+    },
+    {
+      "text": "Et le ministre de la Défense dit oui.",
+      "img": "pearce",
+      "mode": "card",
+      "label": "SIR GEORGE PEARCE · MINISTRE DE LA DÉFENSE"
+    },
+    {
+      "text": "Le major Meredith part avec deux soldats, deux mitrailleuses Lewis et 10 000 cartouches.",
+      "img": "mcmurray",
+      "mode": "card",
+      "label": "SGT McMURRAY & ART. O'HALLORAN · 1932",
+      "stamp": {
+        "text": "10 000 CARTOUCHES",
+        "on": "cartouches"
+      }
+    },
+    {
+      "text": "L'opération commence le 2 novembre. Et très vite, tout part de travers.",
+      "img": "soldats",
+      "mode": "card",
+      "label": "LES SOLDATS · NOVEMBRE 1932",
+      "stamp": {
+        "text": "2 NOVEMBRE 1932",
+        "on": "novembre"
+      }
+    },
+    {
+      "text": "Les émeus se dispersent en petits groupes et filent à près de 50 kilomètres-heure.",
+      "img": "emeu_court",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "grade": "natural",
+      "stamp": {
+        "text": "50 KM/H",
+        "on": "kilomètres-heure"
+      },
+      "sfx": [
+        {
+          "src": "sfx/whoosh2.mp3",
+          "volume": 0.4,
+          "on": "filent"
+        }
+      ]
+    },
+    {
+      "text": "Lors d'une embuscade, la mitrailleuse s'enraye après une douzaine d'oiseaux.",
+      "img": "lewis",
+      "mode": "card",
+      "label": "UNE MITRAILLEUSE LEWIS · 1932"
+    },
+    {
+      "text": "Ils l'installent sur un camion. Mais le terrain est si accidenté que personne ne peut viser.",
+      "img": "emeu_court",
+      "mode": "cover",
+      "focus": [
+        0.6,
+        0.55
+      ],
+      "grade": "natural"
+    },
+    {
+      "text": "Moquée par la presse, l'armée se retire. Puis revient. Puis abandonne pour de bon.",
+      "img": "pearce",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "label": "SURNOMMÉ « LE MINISTRE DE LA GUERRE DES ÉMEUS »",
+      "stamp": {
+        "text": "RETRAITE",
+        "on": "abandonne"
+      }
+    },
+    {
+      "text": "Bilan revendiqué : 9860 cartouches pour 986 émeus. Dix balles par oiseau.",
+      "img": "emeus_1932",
+      "mode": "card",
+      "label": "BILAN OFFICIEL · DÉCEMBRE 1932",
+      "stamp": {
+        "text": "10 BALLES / ÉMEU",
+        "on": "oiseau"
+      }
+    },
+    {
+      "text": "Un ornithologue écrira que les émeus avaient visiblement adopté… des tactiques de guérilla.",
+      "img": "emeu_tete2",
+      "mode": "cover",
+      "focus": [
+        0.6,
+        0.35
+      ],
+      "grade": "natural"
+    },
+    {
+      "text": "Les soldats sont rentrés chez eux. Les émeus, eux, sont toujours là.",
+      "img": "emeu_tete",
+      "mode": "cover",
+      "focus": [
+        0.5,
+        0.25
+      ],
+      "grade": "natural",
+      "stamp": {
+        "text": "VICTOIRE DES ÉMEUS",
+        "on": "là"
+      },
+      "gap": 0.1
+    }
+  ],
+  "post": {
+    "caption": "En 1932, l'Australie a envoyé l'armée et des mitrailleuses contre 20 000 émeus… et elle a perdu 🐦\nLa guerre des émeus, l'une des histoires les plus absurdes du XXe siècle.\nTeam émeus ou team armée ? 👇",
+    "hashtags": [
+      "#histoirevraie",
+      "#guerredesemeus",
+      "#emuwar",
+      "#australie",
+      "#histoire",
+      "#insolite",
+      "#anecdote",
+      "#culturegenerale",
+      "#apprendresurtiktok",
+      "#pourtantcestvrai"
+    ],
+    "sources": [
+      "https://fr.wikipedia.org/wiki/Guerre_des_émeus",
+      "https://en.wikipedia.org/wiki/Emu_War"
+    ]
+  }
+}

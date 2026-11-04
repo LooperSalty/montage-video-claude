@@ -1,0 +1,8 @@
+# Scripts bash : toujours LF (sinon « bad interpreter » sous macOS/Linux et Git Bash)
+*.sh text eol=lf
+# Médias : jamais de conversion
+*.mp3 binary
+*.jpg binary
+*.png binary
+*.ttf binary
+*.ico binary

@@ -1,0 +1,22 @@
+# Dépendances et caches
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+NVIDIA Corporation/
+
+# Rendus et fichiers générés (se refont avec le pipeline)
+tiktok/studio/out/
+tiktok/exports/
+tiktok/studio/public/stories/
+*.exe
+
+# Clones de référence téléchargés par l'installeur ou à la main
+/filmcraft/
+/video-use/
+
+# Secrets : jamais dans le dépôt
+.env
+*.token

@@ -1,0 +1,120 @@
+================================================================================
+          GUIDE COMPLET : MONTAGE VIDEO AVEC CLAUDE CODE + REMOTION
+================================================================================
+
+## Setup initial (une seule fois)
+
+### 1. Installer Remotion + les skills officielles
+
+    # Creer un projet Remotion
+    npm create video@latest -- --blank my-video
+    cd my-video
+    npm install
+
+    # Installer les skills Remotion officielles pour Claude
+    npx skills add remotion-dev/skills
+
+### 2. Installer le MCP Remotion (optionnel mais recommande)
+
+Le MCP Remotion permet un controle direct depuis Claude Code.
+Voir : https://www.remotion.dev/docs/ai/mcp
+
+================================================================================
+
+## Comment demander a Claude de monter une video
+
+### Approche simple - un prompt suffit
+
+    Cree une video Remotion de 30 secondes qui montre :
+    - Intro avec mon logo (fichier: assets/logo.png)
+    - 3 slides avec ces textes : "Point 1", "Point 2", "Point 3"
+    - Transitions fade entre chaque slide
+    - Musique de fond (fichier: assets/music.mp3)
+    - Outro avec texte "Merci"
+    - Resolution 1920x1080, 30fps
+
+### Approche avancee - video complexe
+
+    Monte une video produit pour mon app. Voici le brief :
+
+    ASSETS :
+    - Screenshots dans ./assets/screens/ (5 images PNG)
+    - Logo : ./assets/logo.svg
+    - Musique : ./assets/bg-music.mp3
+    - Voiceover : ./assets/narration.mp3
+
+    STRUCTURE :
+    1. [0-3s] Intro animee avec logo, zoom-in + texte "Decouvrez AppName"
+    2. [3-8s] Screenshot 1 avec hotspot sur le bouton principal
+    3. [8-13s] Screenshot 2 avec slide transition
+    4. [13-18s] Screenshot 3 avec zoom sur feature
+    5. [18-23s] Screenshot 4 + texte overlay "50% plus rapide"
+    6. [23-28s] Screenshot 5 avec animation de sortie
+    7. [28-30s] Outro : logo + call-to-action
+
+    STYLE : Moderne, couleurs #1a1a2e et #e94560, police Inter
+    FORMAT : 1080p, MP4, 30fps
+
+================================================================================
+
+## Ce que Claude fait concretement
+
+  Etape         | Action
+  --------------|----------------------------------------------------------
+  1. Setup      | Cree le projet Remotion, installe les dependances
+  2. Composants | Ecrit ScreenSlide.tsx, TextOverlay.tsx, Hotspot.tsx en React
+  3. Composition| Assemble tout dans WalkthroughComposition.tsx
+  4. Config     | Configure remotion.config.ts (dimensions, fps, codec)
+  5. Preview    | Lance npm run dev pour preview dans le browser
+  6. Render     | Execute npx remotion render pour generer le MP4
+
+================================================================================
+
+## Types de videos possibles
+
+  Type            | Exemple de prompt
+  ----------------|----------------------------------------------------------
+  Demo produit    | "Monte un walkthrough de mes screenshots d'app"
+  Presentation    | "Cree une video de 60s avec ces 10 bullet points"
+  Pub/Promo       | "Video pub de 15s avec animations dynamiques et CTA"
+  Tutoriel        | "Video step-by-step montrant comment utiliser l'API"
+  Social media    | "Reel vertical 9:16 de 30s pour Instagram"
+  Data viz        | "Anime ce graphique avec les donnees de ce JSON"
+
+================================================================================
+
+## Tips pour de bons resultats
+
+  1. Mettre les assets dans le dossier assets/ AVANT de demander
+     (images, audio, logo)
+  2. Etre precis sur le timing : "3 secondes par slide" plutot que
+     "quelques secondes"
+  3. Indiquer les couleurs et la police, sinon Claude choisit
+  4. Preciser le format :
+     - 16:9 (YouTube)
+     - 9:16 (Reels/TikTok)
+     - 1:1 (Instagram)
+  5. Iterer : "Rallonge la slide 3 de 2s", "Change la transition en slide"
+
+================================================================================
+
+## Kickstart rapide - Pour tester
+
+    Cree un projet Remotion dans ~/Documents/projets/montage_video_claude/
+    avec une video de 10 secondes : texte "Hello World"
+    qui apparait en fade-in, grossit avec un spring,
+    puis disparait. Fond noir, texte blanc, 1080p.
+    Rends le MP4 final.
+
+================================================================================
+
+## Sources et references
+
+  - Remotion + Claude Code : https://www.remotion.dev/docs/ai/claude-code
+  - Remotion Agent Skills : https://www.remotion.dev/docs/ai/skills
+  - Remotion MCP          : https://www.remotion.dev/docs/ai/mcp
+  - Remotion Transitions  : https://www.remotion.dev/docs/transitions
+  - Kickstart template    : https://github.com/jhartquist/claude-remotion-kickstart
+  - Guide complet         : https://medium.com/@creativeaininja/making-videos-with-code-the-complete-guide-to-remotion-and-claude-code-82892e21d022
+
+================================================================================

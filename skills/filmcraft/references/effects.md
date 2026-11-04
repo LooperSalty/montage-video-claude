@@ -1,0 +1,318 @@
+# Effets et transitions FilmCraft (générés par scripts/gen_reference.py)
+
+Appliquer : effects.apply {clips, effect: id}. Régler : effects.setParam {clip, effect: id|index, param, value}.
+
+## Video
+
+- `motion` (Motion, None) — position:point, scale:float[0..10000], scale_width:float[0..10000], uniform_scale:bool, rotation:angle, anchor:point, anti_flicker:float[0..1]
+- `opacity` (Opacity, None) — opacity:float[0..100], blend:choice(Normal|Dissolve|Darken|Multiply|Color Burn|Linear Burn|Darker Color|Lighten|Screen|Color Dodge|Linear Dodge (Add)|Lighter Color|Overlay|Soft Light|Hard Light|Vivid Light|Linear Light|Pin Light|Hard Mix|Difference|Exclusion|Subtract|Divide|Hue|Saturation|Color|Luminosity)
+- `time_remap` (Time Remapping, None) — speed:float[-10000..10000]
+- `brightness_contrast` (Brightness & Contrast, Color Correction) — brightness:float[-100..100], contrast:float[-100..100]
+- `tint` (Tint, Color Correction) — black:color, white:color, amount:float[0..100]
+- `color_balance` (Color Balance, Obsolete) — shadow_r:float[-100..100], shadow_g:float[-100..100], shadow_b:float[-100..100], mid_r:float[-100..100], mid_g:float[-100..100], mid_b:float[-100..100], hi_r:float[-100..100], hi_g:float[-100..100], hi_b:float[-100..100], preserve:bool
+- `leave_color` (Leave Color, Obsolete) — amount:float[0..100], color:color, tolerance:float[0..100], softness:float[0..100]
+- `change_to_color` (Change to Color, Obsolete) — from:color, to:color, hue_tol:float[0..100], softness:float[0..100]
+- `lumetri` (Lumetri Color, Color Correction) — basic_on:bool, input_lut:text, temperature:float[-100..100], tint:float[-100..100], exposure:float[-5..5], contrast:float[-100..100], highlights:float[-100..100], shadows:float[-100..100], whites:float[-100..100], blacks:float[-100..100], saturation:float[0..200], hdr_white:float[100..10000], hdr_specular:float[-100..100], creative_on:bool, look:choice(None|Teal & Orange|Warm Film|Cool Blue|Bleach Bypass|Faded Matte|Monochrome|Golden Hour|Night), look_lut:text, look_intensity:float[0..200], faded_film:float[0..100], sharpen:float[-100..100], vibrance:float[-100..100], creative_sat:float[0..200], shadow_tint:color, highlight_tint:color, curves_on:bool, curve_luma:curve, curve_red:curve, curve_green:curve, curve_blue:curve, hue_vs_sat:curve, hue_vs_hue:curve, hue_vs_luma:curve, luma_vs_sat:curve, sat_vs_sat:curve, curves_hdr_range:float[100..10000], wheels_on:bool, wheel_shadows:wheel, wheel_shadows_l:float[-100..100], wheel_midtones:wheel, wheel_midtones_l:float[-100..100], wheel_highlights:wheel, wheel_highlights_l:float[-100..100], hsl_on:bool, hsl_hue:float[0..360], hsl_hue_range:float[1..180], hsl_sat_min:float[0..100], hsl_luma_min:float[0..100], hsl_luma_max:float[0..100], hsl_soft:float[0..100], hsl_show_mask:choice(Off|Color/Gray|Color/Black|White/Black), hsl_denoise:float[0..100], hsl_blur:float[0..100], hsl_temp:float[-100..100], hsl_tint:float[-100..100], hsl_sat:float[0..200], hsl_hue_shift:float[-180..180], vignette_on:bool, vignette_amount:float[-5..5], vignette_midpoint:float[0..100], vignette_roundness:float[-100..100], vignette_feather:float[0..100]
+- `gaussian_blur` (Gaussian Blur, Blur & Sharpen) — blurriness:float[0..3000], dimensions:choice(Horizontal and Vertical|Horizontal|Vertical), repeat_edge:bool
+- `directional_blur` (Directional Blur, Blur & Sharpen) — direction:angle, length:float[0..1000]
+- `sharpen` (Sharpen, Blur & Sharpen) — amount:float[0..4000]
+- `unsharp_mask` (Unsharp Mask, Blur & Sharpen) — amount:float[0..500], radius:float[0.1..250], threshold:float[0..255]
+- `camera_blur` (Camera Blur, Video Effects) — percent:float[0..100]
+- `black_white` (Black & White, Image Control)
+- `color_pass` (Color Pass, Image Control) — color:color, similarity:float[0..100], reverse:bool
+- `gamma_correction` (Gamma Correction, Image Control) — gamma:float[1..28]
+- `invert` (Invert, Image Control) — channel:choice(RGB|Red|Green|Blue|Alpha), blend:float[0..100]
+- `levels` (Levels, Adjust) — in_black:float[0..255], in_white:float[0..255], out_black:float[0..255], out_white:float[0..255], gamma:float[10..1000]
+- `proc_amp` (ProcAmp, Adjust) — brightness:float[-100..100], contrast:float[0..200], hue:angle, saturation:float[0..200]
+- `extract` (Extract, Adjust) — black:float[0..255], white:float[0..255], softness:float[0..100], invert:bool
+- `posterize` (Posterize, Stylize) — levels:float[2..255]
+- `mosaic` (Mosaic, Stylize) — horizontal:float[1..4000], vertical:float[1..4000], sharp:bool, softness:float[0..100]
+- `find_edges` (Find Edges, Stylize) — invert:bool, blend:float[0..100]
+- `emboss` (Emboss, Obsolete) — direction:angle, relief:float[0..10], contrast:float[0..500], blend:float[0..100]
+- `replicate` (Replicate, Video Effects) — count:float[2..16]
+- `strobe` (Strobe Light, Stylize) — color:color, blend:float[0..100], duration:float[0..30], period:float[0..30]
+- `noise` (Noise, Noise & Grain) — amount:float[0..100], color:bool, clip:bool, grain_size:float[1..10]
+- `median` (Median, Obsolete) — radius:float[0..100]
+- `crop` (Crop, Video Effects) — left:float[0..100], top:float[0..100], right:float[0..100], bottom:float[0..100], zoom:bool, feather:float[0..1000]
+- `horizontal_flip` (Horizontal Flip, Transform)
+- `vertical_flip` (Vertical Flip, Transform)
+- `edge_feather` (Edge Feather, Video Effects) — amount:float[0..100]
+- `transform` (Transform, Transform) — anchor:point, position:point, uniform_scale:bool, scale_height:float[0..10000], scale_width:float[0..10000], skew:float[-70..70], skew_axis:angle, rotation:angle, opacity:float[0..100], shutter_override:bool, shutter_angle:float[0..360]
+- `mirror` (Mirror, Distort) — center:point, angle:angle
+- `offset` (Offset, Transform) — shift:point, blend:float[0..100]
+- `lens_distortion` (Lens Distortion, Distort) — curvature:float[-100..100], v_decentering:float[-100..100], h_decentering:float[-100..100]
+- `twirl` (Twirl, Distort) — angle:angle, radius:float[0..100], center:point
+- `wave_warp` (Wave Warp, Distort) — height:float[-4000..4000], width:float[1..4000], direction:angle, speed:float[-100..100]
+- `basic_3d` (Basic 3D, Perspective) — swivel:angle, tilt:angle, distance:float[-10000..10000]
+- `drop_shadow` (Drop Shadow, Perspective) — color:color, opacity:float[0..100], direction:angle, distance:float[0..4000], softness:float[0..1000], only:bool
+- `bevel_alpha` (Bevel Alpha, Obsolete) — thickness:float[0..200], angle:angle, color:color, intensity:float[0..100]
+- `ultra_key` (Ultra Key, Keying) — key_color:color, output:choice(Composite|Alpha Channel|Color Channel), setting:choice(Default|Relaxed|Aggressive|Custom), transparency:float[0..100], highlight:float[0..100], shadow:float[0..100], tolerance:float[0..100], pedestal:float[0..100], choke:float[0..100], soften:float[0..100], spill:float[0..100], contrast:float[0..100], mid_point:float[0..100], desaturate:float[0..100], range:float[0..100], spill_luma:float[0..100], cc_saturation:float[0..200], cc_hue:angle, cc_luminance:float[0..200]
+- `track_matte` (Track Matte Key, Keying) — matte:choice(None|Video 1|Video 2|Video 3|Video 4|Video 5|Video 6|Video 7|Video 8), composite:choice(Matte Alpha|Matte Luma), reverse:bool
+- `color_key` (Color Key, Keying) — color:color, tolerance:float[0..255], thin:float[-5..5], feather:float[0..50]
+- `luma_key` (Luma Key, Keying) — threshold:float[0..100], cutoff:float[0..100]
+- `four_color_gradient` (4-Color Gradient, Generate) — c1:color, c2:color, c3:color, c4:color, blend:float[1..1000], opacity:float[0..100]
+- `ramp` (Ramp, Video Effects) — start:point, start_color:color, end:point, end_color:color, shape:choice(Linear Ramp|Radial Ramp), blend:float[0..100]
+- `circle` (Circle, Obsolete) — center:point, radius:float[0..4000], color:color, opacity:float[0..100]
+- `grid` (Grid, Obsolete) — size:float[1..4000], border:float[0..100], color:color, opacity:float[0..100]
+- `lens_flare` (Lens Flare, Lights & Glows) — center:point, brightness:float[0..300], blend:float[0..100], lens_type:choice(50-300mm Zoom|35mm Prime|105mm Prime|Anamorphic), color:color, size:float[10..400], ghosts:float[0..8]
+- `timecode` (Timecode, Obsolete) — position:point, size:float[1..100], opacity:float[0..100]
+- `clip_name` (Clip Name, Obsolete) — position:point, size:float[1..100]
+- `simple_text` (Simple Text, Utility) — text:text, position:point, size:float[1..1000], font:choice(Inter|JetBrains Mono), alignment:choice(Left|Center|Right), color:color, bg_opacity:float[0..100]
+- `lighting_effects` (Lighting Effects, Adjust) — l1_type:choice(None|Directional|Omni|Spotlight), l1_color:color, l1_center:point, l1_major:float[0..100], l1_minor:float[0..100], l1_angle:angle, l1_intensity:float[-100..100], l1_focus:float[0..100], l2_type:choice(None|Directional|Omni|Spotlight), l2_color:color, l2_center:point, l2_major:float[0..100], l2_minor:float[0..100], l2_angle:angle, l2_intensity:float[-100..100], l2_focus:float[0..100], l3_type:choice(None|Directional|Omni|Spotlight), l3_color:color, l3_center:point, l3_major:float[0..100], l3_minor:float[0..100], l3_angle:angle, l3_intensity:float[-100..100], l3_focus:float[0..100], l4_type:choice(None|Directional|Omni|Spotlight), l4_color:color, l4_center:point, l4_major:float[0..100], l4_minor:float[0..100], l4_angle:angle, l4_intensity:float[-100..100], l4_focus:float[0..100], l5_type:choice(None|Directional|Omni|Spotlight), l5_color:color, l5_center:point, l5_major:float[0..100], l5_minor:float[0..100], l5_angle:angle, l5_intensity:float[-100..100], l5_focus:float[0..100], ambient_color:color, ambient:float[-100..100], gloss:float[-100..100], material:float[-100..100], exposure:float[-100..100], bump_height:float[-100..100], white_high:bool
+- `bokeh_blur` (Bokeh Blur, Blur & Sharpen) — amount:float[0..500], shape:choice(Circle|Triangle|Square|Pentagon|Hexagon|Octagon), rotation:angle, highlight:float[0..100], threshold:float[0..100]
+- `channel_blur` (Channel Blur, Blur & Sharpen) — red:float[0..1000], green:float[0..1000], blue:float[0..1000], alpha:float[0..1000], repeat_edge:bool, dimensions:choice(Horizontal and Vertical|Horizontal|Vertical)
+- `compound_blur` (Compound Blur, Blur & Sharpen) — layer:choice(None|Video 1|Video 2|Video 3|Video 4|Video 5|Video 6|Video 7|Video 8), max:float[0..500], stretch:bool, invert:bool
+- `focus_blur` (Focus Blur, Blur & Sharpen) — shape:choice(Radial|Linear), center:point, angle:angle, size:float[0..4000], feather:float[0..4000], amount:float[0..500], show:bool
+- `reduce_interlace_flicker` (Reduce Interlace Flicker, Blur & Sharpen) — softness:float[0..10]
+- `asc_cdl` (ASC CDL, Color Correction) — r_slope:float[0..10], r_offset:float[-1..1], r_power:float[0..10], g_slope:float[0..10], g_offset:float[-1..1], g_power:float[0..10], b_slope:float[0..10], b_offset:float[-1..1], b_power:float[0..10], saturation:float[0..10]
+- `video_limiter` (Video Limiter, Color Correction) — clip_level:choice(100 IRE|101 IRE|102 IRE|103 IRE|104 IRE|105 IRE|106 IRE|107 IRE|108 IRE|109 IRE), compression:choice(None|3%|5%|10%|20%), axis:choice(Luma|Chroma|Luma and Chroma|Smart Limit), gamut_warning:bool, warning_color:color
+- `vignette` (Vignette, Color Correction) — amount:float[-100..100], midpoint:float[0..100], roundness:float[-100..100], feather:float[0..100], color:color
+- `corner_pin` (Corner Pin, Distort) — upper_left:point, upper_right:point, lower_left:point, lower_right:point
+- `magnify` (Magnify, Distort) — shape:choice(Circle|Square), center:point, magnification:float[100..600], size:float[0..4000], feather:float[0..1000], opacity:float[0..100], mode:choice(Normal|Add|Screen|Multiply|Overlay)
+- `spherize` (Spherize, Distort) — radius:float[0..2500], center:point
+- `turbulent_displace` (Turbulent Displace, Distort) — displacement:choice(Turbulent|Bulge|Twist|Turbulent Smoother|Bulge Smoother|Twist Smoother|Vertical Displacement|Horizontal Displacement|Cross Displacement), amount:float[-1000..1000], size:float[2..1000], offset:point, complexity:float[1..10], evolution:angle, cycle:bool, cycle_revs:float[1..100], seed:float[0..10000], pinning:choice(None|Pin All|Pin Horizontal|Pin Vertical), antialias:choice(Low|High)
+- `warp_stabilizer` (Warp Stabilizer, Distort) — result:choice(Smooth Motion|No Motion), smoothness:float[0..1000], method:choice(Position|Position, Scale, Rotation|Perspective|Subspace Warp), preserve_scale:bool, framing:choice(Stabilize Only|Stabilize, Crop|Stabilize, Crop, Auto-scale|Stabilize, Synthesize Edges), max_scale:float[100..1000], action_safe:float[0..100], additional_scale:float[50..400], detailed:bool, crop_less:float[0..100]
+- `gradient` (Gradient, Generate) — start:point, start_color:color, end:point, end_color:color, shape:choice(Linear|Radial|Reflected|Diamond), scatter:float[0..100], midpoint:float[0..100], blend:float[0..100]
+- `channel_mix` (Channel Mix, Image Control) — rr:float[-200..200], rg:float[-200..200], rb:float[-200..200], rc:float[-200..200], gr:float[-200..200], gg:float[-200..200], gb:float[-200..200], gc:float[-200..200], br:float[-200..200], bg:float[-200..200], bb:float[-200..200], bc:float[-200..200], monochrome:bool
+- `color_replace` (Color Replace, Image Control) — similarity:float[0..100], solid:bool, target:color, replace:color
+- `rounded_crop` (Rounded Crop, Image Control) — left:float[0..100], top:float[0..100], right:float[0..100], bottom:float[0..100], radius:float[0..2000], feather:float[0..500], border:float[0..500], border_color:color
+- `alpha_adjust` (Alpha Adjust, Keying) — opacity:float[0..100], ignore:bool, invert:bool, mask_only:bool
+- `logo_cutout` (Logo Cutout, Keying) — background:choice(White|Black|Custom Color), color:color, threshold:float[0..100], softness:float[0..100], unmultiply:bool, invert:bool
+- `echo_glow` (Echo Glow, Lights & Glows) — threshold:float[0..100], echoes:float[1..12], radius:float[0..500], spread:float[1..4], intensity:float[0..1000], decay:float[0..100], color:color
+- `edge_glow` (Edge Glow, Lights & Glows) — threshold:float[0..100], width:float[0..50], radius:float[0..500], intensity:float[0..1000], color:color, only:bool
+- `glint` (Glint, Lights & Glows) — threshold:float[0..100], rays:choice(2|4|6|8), length:float[0..2000], rotation:angle, intensity:float[0..1000], color:color, colorize:float[0..100]
+- `light_leaks` (Light Leaks, Lights & Glows) — c1:color, c2:color, intensity:float[0..100], scale:float[10..1000], direction:angle, speed:float[0..20], seed:float[0..10000], mode:choice(Screen|Add|Overlay)
+- `rgb_split` (RGB Split, Lights & Glows) — mode:choice(Linear|Radial), amount:float[0..1000], angle:angle, center:point, blend:float[0..100]
+- `volumetric_rays` (Volumetric Rays, Lights & Glows) — center:point, threshold:float[0..100], length:float[0..100], intensity:float[0..1000], color:color, only:bool
+- `wonder_glow` (Wonder Glow, Lights & Glows) — threshold:float[0..100], radius:float[0..1000], intensity:float[0..1000], saturation:float[0..400], use_color:bool, color:color, mode:choice(Add|Screen)
+- `long_shadow` (Long Shadow, Perspective) — angle:angle, length:float[0..4000], color:color, opacity:float[0..100], fade:bool, only:bool
+- `brush_strokes` (Brush Strokes, Stylize) — angle:angle, size:float[0..5], length:float[0..40], density:float[0..2], randomness:float[0..2], surface:choice(Paint On Original Image|Paint On Transparent|Paint On White|Paint On Black), blend:float[0..100]
+- `color_emboss` (Color Emboss, Stylize) — direction:angle, relief:float[0..10], contrast:float[0..500], blend:float[0..100]
+- `roughen_edges` (Roughen Edges, Stylize) — edge_type:choice(Roughen|Roughen Color|Cut|Spiky|Rusty|Rusty Color|Photocopy|Photocopy Color), edge_color:color, border:float[0..500], sharpness:float[0..10], influence:float[0..1], scale:float[10..1000], stretch:float[-10..10], offset:point, complexity:float[1..10], evolution:angle, seed:float[0..10000]
+- `posterize_time` (Posterize Time, Time) — rate:float[0.1..99]
+- `rotate_3d` (3D Rotate, Transform) — rot_x:angle, rot_y:angle, rot_z:angle, perspective:float[0..100], z:float[-10000..10000], hide_back:bool
+- `auto_reframe` (Auto Reframe, Transform) — preset:choice(Slower Motion|Default|Faster Motion), offset:point, zoom:float[100..400], aspect:choice(Sequence|Vertical 9:16|Square 1:1|Vertical 4:5|Horizontal 16:9)
+- `camera_shake` (Camera Shake, Transform) — amount:float[0..1000], rotation:float[0..45], zoom:float[0..100], frequency:float[0.1..60], complexity:float[1..6], motion_blur:float[0..100], seed:float[0..10000]
+- `grow` (Grow, Transform) — from:float[1..1000], to:float[1..1000], center:point, easing:choice(Linear|Ease In|Ease Out|Ease In and Out)
+- `shrink` (Shrink, Transform) — from:float[1..1000], to:float[1..1000], center:point, easing:choice(Linear|Ease In|Ease Out|Ease In and Out)
+- `move` (Move, Transform) — from:point, to:point, easing:choice(Linear|Ease In|Ease Out|Ease In and Out), motion_blur:float[0..100]
+- `spin` (Spin, Transform) — amount:float[-36000..36000], center:point, easing:choice(Linear|Ease In|Ease Out|Ease In and Out), scale:float[1..1000]
+- `spacer` (Spacer, Transform) — left:float[0..4000], top:float[0..4000], right:float[0..4000], bottom:float[0..4000], uniform:bool, radius:float[0..2000], fill:bool, color:color
+- `wiggle` (Wiggle, Transform) — frequency:float[0..60], amount:float[0..2000], rotation:float[0..180], scale:float[0..100], dimensions:choice(Horizontal and Vertical|Horizontal|Vertical), seed:float[0..10000]
+- `auto_align` (Auto Align, Utility) — horizontal:choice(None|Left|Center|Right), vertical:choice(None|Top|Center|Bottom), margin_x:float[0..4000], margin_y:float[0..4000]
+- `cineon_converter` (Cineon Converter, Utility) — conversion:choice(Log to Linear|Linear to Log|Log to Log), black10:float[0..1023], black_internal:float[0..255], white10:float[0..1023], white_internal:float[0..255], gamma:float[0.1..5], rolloff:float[0..255]
+- `clone` (Clone, Utility) — columns:float[1..16], rows:float[1..16], gap:float[0..1000], mirror:bool
+- `stroke` (Stroke, Utility) — color:color, width:float[0..500], position:choice(Outside|Center|Inside), opacity:float[0..100], only:bool
+- `metadata_burnin` (Metadata & Timecode Burn-in, Video) — source:choice(Sequence Timecode|Media Timecode|Clip Name|File Name|Frame Count|Sequence Name), position:point, alignment:choice(Bottom Center|Bottom Left|Bottom Right|Top Center|Top Left|Top Right|Custom), size:float[1..100], color:color, opacity:float[0..100], prefix:text
+- `echo` (Echo, Obsolete) — time:float[-10..10], count:float[0..30], start:float[0..1], decay:float[0..2], operator:choice(Add|Maximum|Minimum|Screen|Composite In Back|Composite In Front|Blend)
+- `lightning` (Lightning, Obsolete) — start:point, end:point, segments:float[1..100], amplitude:float[0..100], detail:float[0..10], detail_amplitude:float[0..1], branching:float[0..1], speed:float[0..100], width:float[0..200], core:float[0..1], outside:color, inside:color, seed:float[0..10000], mode:choice(Normal|Add|Screen|Multiply|Overlay)
+- `cell_pattern` (Cell Pattern, Obsolete) — pattern:choice(Bubbles|Crystals|Plates|Static Plates|Crystallize|Pillow|Mixed Crystals|Tubular), invert:bool, contrast:float[0..10000], overflow:choice(Clip|Soft Clamp|Wrap Back), disperse:float[0..1.5], size:float[0..2000], offset:point, evolution:angle, seed:float[0..10000]
+- `checkerboard` (Checkerboard, Obsolete) — anchor:point, width:float[0..4000], height:float[0..4000], square:bool, feather:float[0..100], color:color, opacity:float[0..100], mode:choice(None|Normal|Add|Multiply|Screen|Overlay)
+- `ellipse` (Ellipse, Obsolete) — center:point, width:float[0..4000], height:float[0..4000], thickness:float[0..1000], softness:float[0..100], inside:color, outside:color, composite:bool
+- `paint_bucket` (Paint Bucket, Obsolete) — point:point, selector:choice(Color & Alpha|Straight Color|Transparency|Opacity), tolerance:float[0..255], invert:bool, color:color, opacity:float[0..100], mode:choice(Normal|Behind|Add|Multiply|Screen)
+- `write_on` (Write-on, Obsolete) — brush:point, color:color, size:float[0..500], hardness:float[0..100], opacity:float[0..100], stroke_length:float[0..3600], spacing:float[0.001..1], style:choice(On Original Image|On Transparent|Reveal Original Image)
+- `alpha_glow` (Alpha Glow, Video Effects) — glow:float[0..100], brightness:float[0..255], start_color:color, end_color:color, use_end:bool, fade_out:bool
+- `block_dissolve` (Block Dissolve, Video Effects) — completion:float[0..100], block_w:float[0..4000], block_h:float[0..4000], feather:float[0..100], soft:bool
+- `directional_blur_legacy` (Directional Blur (Legacy), Video Effects) — direction:angle, length:float[0..1000]
+- `gaussian_blur_legacy` (Gaussian Blur (Legacy), Video Effects) — blurriness:float[0..3000], dimensions:choice(Horizontal and Vertical|Horizontal|Vertical)
+- `gradient_wipe_legacy` (Gradient Wipe (Legacy), Video Effects) — completion:float[0..100], softness:float[0..100], layer:choice(None|Video 1|Video 2|Video 3|Video 4|Video 5|Video 6|Video 7|Video 8), placement:choice(Tile Gradient|Center Gradient|Stretch Gradient to Fit), invert:bool
+- `linear_wipe_legacy` (Linear Wipe (Legacy), Video Effects) — completion:float[0..100], angle:angle, feather:float[0..4000]
+- `magnify_legacy` (Magnify (Legacy), Video Effects) — shape:choice(Circle|Square), center:point, magnification:float[100..600], size:float[0..4000], feather:float[0..1000], opacity:float[0..100], mode:choice(Normal|Add|Screen|Multiply|Overlay)
+- `mosaic_legacy` (Mosaic (Legacy), Video Effects) — horizontal:float[1..4000], vertical:float[1..4000], sharp:bool
+- `noise_legacy` (Noise (Legacy), Video Effects) — amount:float[0..100], color:bool, clip:bool
+- `twirl_legacy` (Twirl (Legacy), Video Effects) — angle:angle, radius:float[0..100], center:point
+- `vr_blur` (VR Blur, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), blurriness:float[0..1000]
+- `vr_chromatic_aberrations` (VR Chromatic Aberrations, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), red:float[-100..100], green:float[-100..100], blue:float[-100..100], center_x:float[-180..180], center_y:float[-90..90], falloff:float[0..100], inverse:bool
+- `vr_color_gradients` (VR Color Gradients, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), c1:color, p1_lon:float[-180..180], p1_lat:float[-90..90], c2:color, p2_lon:float[-180..180], p2_lat:float[-90..90], c3:color, p3_lon:float[-180..180], p3_lat:float[-90..90], blend:float[1..100], opacity:float[0..100], mode:choice(Normal|Add|Screen|Multiply|Overlay)
+- `vr_denoise` (VR De-Noise, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), amount:float[0..100], noise_type:choice(Fast|Slow), show_noise:bool
+- `vr_digital_glitch` (VR Digital Glitch, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), amplitude:float[0..100], distortion:float[1..100], rate:float[0..60], color:float[0..100], scanlines:float[0..100], seed:float[0..10000]
+- `vr_fractal_noise` (VR Fractal Noise, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), fractal_type:choice(Basic|Turbulent Smooth|Turbulent Sharp), invert:bool, contrast:float[0..1000], brightness:float[-200..200], scale:float[10..10000], complexity:float[1..10], evolution:angle, opacity:float[0..100], mode:choice(Normal|Add|Screen|Multiply|Overlay)
+- `vr_glow` (VR Glow, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), threshold:float[0..100], radius:float[0..1000], brightness:float[0..10], saturation:float[0..4], use_tint:bool, tint:color
+- `vr_plane_to_sphere` (VR Plane to Sphere, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), scale:float[1..180], pan:float[-180..180], tilt:float[-90..90], roll:angle, feather:float[0..100]
+- `vr_projection` (VR Projection, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), fov:float[10..360], tilt:angle, pan:angle, roll:angle, stretch:bool
+- `vr_rotate_sphere` (VR Rotate Sphere, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), tilt:angle, pan:angle, roll:angle
+- `vr_sharpen` (VR Sharpen, Immersive Video) — frame_layout:choice(Monoscopic|Stereoscopic - Over/Under|Stereoscopic - Side by Side), amount:float[0..500]
+- `graphic_text` (Text, None) — name:text, text:text, font:text, font_style:text, size:float[1..2000], align:choice(Left|Center|Right|Justify), tracking:float[-1000..10000], kerning:bool, ligatures:bool, leading:float[-5000..5000], baseline_shift:float[-5000..5000], faux_bold:bool, faux_italic:bool, caps:choice(Normal|All Caps|Small Caps), underline:bool, box_width:float[0..100000], box_height:float[0..100000], vertical:bool, fill:bool, fill_color:color, fill_kind:choice(Solid|Linear Gradient), gradient_start:color, gradient_end:color, gradient_angle:angle, stroke:bool, stroke_color:color, stroke_width:float[0..1000], stroke_type:choice(Outer|Center|Inner), stroke2:bool, stroke2_color:color, stroke2_width:float[0..1000], stroke2_type:choice(Outer|Center|Inner), background:bool, background_color:color, background_opacity:float[0..100], background_size:float[0..1000], background_radius:float[0..1000], shadow:bool, shadow_color:color, shadow_opacity:float[0..100], shadow_angle:angle, shadow_distance:float[0..1000], shadow_size:float[0..1000], shadow_blur:float[0..1000], position:point, anchor:point, scale:float[0..100000], scale_width:float[0..100000], uniform_scale:bool, rotation:angle, opacity:float[0..100]
+- `graphic_shape` (Shape, None) — name:text, shape:choice(Rectangle|Ellipse|Polygon|Path), size:point, sides:float[3..64], corner_radius:float[0..10000], points:curve, fill:bool, fill_color:color, fill_kind:choice(Solid|Linear Gradient), gradient_start:color, gradient_end:color, gradient_angle:angle, stroke:bool, stroke_color:color, stroke_width:float[0..1000], stroke_type:choice(Outer|Center|Inner), stroke2:bool, stroke2_color:color, stroke2_width:float[0..1000], stroke2_type:choice(Outer|Center|Inner), background:bool, background_color:color, background_opacity:float[0..100], background_size:float[0..1000], background_radius:float[0..1000], shadow:bool, shadow_color:color, shadow_opacity:float[0..100], shadow_angle:angle, shadow_distance:float[0..1000], shadow_size:float[0..1000], shadow_blur:float[0..1000], position:point, anchor:point, scale:float[0..100000], scale_width:float[0..100000], uniform_scale:bool, rotation:angle, opacity:float[0..100]
+
+## Audio
+
+- `volume` (Volume, None) — bypass:bool, level:float[-287.5..15]
+- `channel_volume` (Channel Volume, None) — bypass:bool, left:float[-287.5..6], right:float[-287.5..6]
+- `panner` (Panner, None) — balance:float[-100..100]
+- `amplify` (Amplify, Amplitude and Compression) — gain:float[-96..24]
+- `channel_mixer_a` (Channel Mixer, Amplitude and Compression) — l_from_l:float[-100..100], l_from_r:float[-100..100], invert_l:bool, r_from_l:float[-100..100], r_from_r:float[-100..100], invert_r:bool
+- `channel_volume_a` (Channel Volume, Amplitude and Compression) — left:float[-96..24], right:float[-96..24]
+- `deesser` (DeEsser, Amplitude and Compression) — frequency:float[2000..12000], threshold:float[-40..0], reduction:float[0..24]
+- `dynamics_rack` (Dynamics, Amplitude and Compression) — gate_on:bool, gate_threshold:float[-80..0], gate_attack:float[0.1..100], gate_release:float[1..3000], gate_hold:float[0..1000], comp_on:bool, comp_threshold:float[-60..0], comp_ratio:float[1..30], comp_attack:float[0.1..300], comp_release:float[1..3000], comp_auto:bool, comp_makeup:float[0..30], exp_on:bool, exp_threshold:float[-80..0], exp_ratio:float[1..30], lim_on:bool, lim_threshold:float[-30..0], lim_release:float[1..1000], soft_clip:bool, output:float[-30..30]
+- `dynamics` (Dynamics Processing, Amplitude and Compression) — threshold:float[-60..0], ratio:float[1..30], attack:float[0.1..500], release:float[1..5000]
+- `hard_limiter` (Hard Limiter, Amplitude and Compression) — max:float[-30..0], boost:float[-30..30], lookahead:float[0..30], release:float[1..1000]
+- `multiband_compressor` (Multiband Compressor, Amplitude and Compression) — xo1:float[20..1000], xo2:float[100..8000], xo3:float[1000..20000], b1_threshold:float[-60..0], b1_ratio:float[1..30], b1_attack:float[0.1..500], b1_release:float[1..5000], b1_gain:float[-18..18], b1_solo:bool, b1_bypass:bool, b2_threshold:float[-60..0], b2_ratio:float[1..30], b2_attack:float[0.1..500], b2_release:float[1..5000], b2_gain:float[-18..18], b2_solo:bool, b2_bypass:bool, b3_threshold:float[-60..0], b3_ratio:float[1..30], b3_attack:float[0.1..500], b3_release:float[1..5000], b3_gain:float[-18..18], b3_solo:bool, b3_bypass:bool, b4_threshold:float[-60..0], b4_ratio:float[1..30], b4_attack:float[0.1..500], b4_release:float[1..5000], b4_gain:float[-18..18], b4_solo:bool, b4_bypass:bool, output:float[-18..18], lim_on:bool, lim_threshold:float[-30..0], lim_release:float[1..1000], link:bool
+- `single_band_compressor` (Single-band Compressor, Amplitude and Compression) — threshold:float[-60..0], ratio:float[1..30], attack:float[0.1..300], release:float[1..3000], output:float[-30..30]
+- `tube_compressor` (Tube-modeled Compressor, Amplitude and Compression) — threshold:float[-60..0], ratio:float[1..30], attack:float[0.1..500], release:float[1..5000], output:float[-30..30]
+- `analog_delay` (Analog Delay, Delay and Echo) — mode:choice(Tape|Tape/Tube|Analog), dry:float[0..100], wet:float[0..100], delay:float[5..8000], feedback:float[0..200], trash:float[0..200], spread:float[0..200]
+- `delay` (Delay, Delay and Echo) — delay:float[0..2], feedback:float[0..100], mix:float[0..100]
+- `multitap_delay` (Multitap Delay, Delay and Echo) — delay1:float[1..4000], feedback1:float[0..95], level1:float[-96..0], delay2:float[1..4000], feedback2:float[0..95], level2:float[-96..0], delay3:float[1..4000], feedback3:float[0..95], level3:float[-96..0], delay4:float[1..4000], feedback4:float[0..95], level4:float[-96..0], mix:float[0..100]
+- `bandpass` (Bandpass, Filter and EQ) — center:float[20..20000], q:float[0.1..20]
+- `bass` (Bass, Filter and EQ) — boost:float[-24..24]
+- `fft_filter` (FFT Filter, Filter and EQ) — p1_freq:float[20..20000], p1_gain:float[-60..20], p2_freq:float[20..20000], p2_gain:float[-60..20], p3_freq:float[20..20000], p3_gain:float[-60..20], p4_freq:float[20..20000], p4_gain:float[-60..20], p5_freq:float[20..20000], p5_gain:float[-60..20], p6_freq:float[20..20000], p6_gain:float[-60..20], p7_freq:float[20..20000], p7_gain:float[-60..20], p8_freq:float[20..20000], p8_gain:float[-60..20], interp:choice(Linear|Smooth)
+- `graphic_eq` (Graphic Equalizer (10 Bands), Filter and EQ) — b1:float[-24..24], b2:float[-24..24], b3:float[-24..24], b4:float[-24..24], b5:float[-24..24], b6:float[-24..24], b7:float[-24..24], b8:float[-24..24], b9:float[-24..24], b10:float[-24..24], gain:float[-24..24]
+- `graphic_eq_20` (Graphic Equalizer (20 Bands), Filter and EQ) — b1:float[-24..24], b2:float[-24..24], b3:float[-24..24], b4:float[-24..24], b5:float[-24..24], b6:float[-24..24], b7:float[-24..24], b8:float[-24..24], b9:float[-24..24], b10:float[-24..24], b11:float[-24..24], b12:float[-24..24], b13:float[-24..24], b14:float[-24..24], b15:float[-24..24], b16:float[-24..24], b17:float[-24..24], b18:float[-24..24], b19:float[-24..24], b20:float[-24..24], gain:float[-24..24]
+- `graphic_eq_30` (Graphic Equalizer (30 Bands), Filter and EQ) — b1:float[-24..24], b2:float[-24..24], b3:float[-24..24], b4:float[-24..24], b5:float[-24..24], b6:float[-24..24], b7:float[-24..24], b8:float[-24..24], b9:float[-24..24], b10:float[-24..24], b11:float[-24..24], b12:float[-24..24], b13:float[-24..24], b14:float[-24..24], b15:float[-24..24], b16:float[-24..24], b17:float[-24..24], b18:float[-24..24], b19:float[-24..24], b20:float[-24..24], b21:float[-24..24], b22:float[-24..24], b23:float[-24..24], b24:float[-24..24], b25:float[-24..24], b26:float[-24..24], b27:float[-24..24], b28:float[-24..24], b29:float[-24..24], b30:float[-24..24], gain:float[-24..24]
+- `highpass` (Highpass, Filter and EQ) — cutoff:float[20..20000]
+- `lowpass` (Lowpass, Filter and EQ) — cutoff:float[20..20000]
+- `notch` (Notch Filter, Filter and EQ) — n1_on:bool, n1_freq:float[20..20000], n1_gain:float[-90..0], n2_on:bool, n2_freq:float[20..20000], n2_gain:float[-90..0], n3_on:bool, n3_freq:float[20..20000], n3_gain:float[-90..0], n4_on:bool, n4_freq:float[20..20000], n4_gain:float[-90..0], n5_on:bool, n5_freq:float[20..20000], n5_gain:float[-90..0], n6_on:bool, n6_freq:float[20..20000], n6_gain:float[-90..0], width:choice(Narrow|Very Narrow|Super Narrow)
+- `parametric_eq` (Parametric Equalizer, Filter and EQ) — master_gain:float[-30..30], hp_on:bool, hp_freq:float[10..20000], hp_slope:choice(12 dB/oct|24 dB/oct|36 dB/oct|48 dB/oct), low_on:bool, low_freq:float[20..20000], low_gain:float[-30..30], low_q:float[0.1..30], b1_on:bool, b1_freq:float[20..20000], b1_gain:float[-30..30], b1_q:float[0.1..30], b2_on:bool, b2_freq:float[20..20000], b2_gain:float[-30..30], b2_q:float[0.1..30], mid_on:bool, mid_freq:float[20..20000], mid_gain:float[-30..30], mid_q:float[0.1..30], b4_on:bool, b4_freq:float[20..20000], b4_gain:float[-30..30], b4_q:float[0.1..30], b5_on:bool, b5_freq:float[20..20000], b5_gain:float[-30..30], b5_q:float[0.1..30], high_on:bool, high_freq:float[20..20000], high_gain:float[-30..30], high_q:float[0.1..30], lp_on:bool, lp_freq:float[20..22000], lp_slope:choice(12 dB/oct|24 dB/oct|36 dB/oct|48 dB/oct)
+- `scientific_filter` (Scientific Filter, Filter and EQ) — type:choice(Bessel|Butterworth|Chebyshev|Elliptical), mode:choice(Low Pass|High Pass|Band Pass|Band Stop), order:float[1..12], cutoff:float[20..20000], high_cutoff:float[20..20000], ripple:float[0.01..6], stop_atten:float[20..120], gain:float[-30..30]
+- `simple_notch` (Simple Notch Filter, Filter and EQ) — center:float[20..20000], q:float[0.1..100]
+- `simple_eq` (Simple Parametric EQ, Filter and EQ) — center:float[20..20000], q:float[0.1..20], boost:float[-24..24]
+- `treble` (Treble, Filter and EQ) — boost:float[-24..24]
+- `chorus_flanger` (Chorus/Flanger, Modulation) — mode:choice(Chorus|Flanger), speed:float[0.05..10], width:float[0..100], intensity:float[0..100], transience:float[0..100], mix:float[0..100]
+- `flanger` (Flanger, Modulation) — initial_delay:float[0.1..20], final_delay:float[0.1..20], stereo_phasing:float[0..180], feedback:float[-100..100], rate:float[0.01..10], inverted:bool, special:bool, sinusoidal:bool, mix:float[0..100]
+- `phaser` (Phaser, Modulation) — stages:float[2..12], intensity:float[0..100], depth:float[0..100], rate:float[0.01..10], phase_diff:float[0..180], upper_freq:float[100..20000], feedback:float[-100..100], mix:float[0..100], output:float[-24..24]
+- `declicker` (Automatic Click Remover, Noise Reduction/Restoration) — threshold:float[1..100], complexity:float[1..100]
+- `dehummer` (DeHummer, Noise Reduction/Restoration) — freq:choice(50 Hz|60 Hz), gain:float[-80..0], harmonics:float[1..10], q:float[1..100]
+- `denoise` (DeNoise, Noise Reduction/Restoration) — amount:float[0..100]
+- `dereverb` (DeReverb, Noise Reduction/Restoration) — amount:float[0..100], rt60:float[0.1..5]
+- `speech_enhance` (Enhance Speech, Noise Reduction/Restoration) — mix:float[0..100], tone:choice(Low Tone|High Tone)
+- `convolution_reverb` (Convolution Reverb, Reverb) — impulse:choice(Small Room|Medium Room|Large Hall|Cathedral|Plate|Ambience|Vocal Booth), mix:float[0..100], room_size:float[10..100], damping_lf:float[10..1000], damping_hf:float[1000..20000], predelay:float[0..500], width:float[0..100], gain:float[-24..12]
+- `studio_reverb` (Studio Reverb, Reverb) — room:float[0..100], decay:float[0..100], damping:float[0..100], dry:float[0..100], wet:float[0..100]
+- `surround_reverb` (Surround Reverb, Reverb) — center_input:float[0..100], room_size:float[0..100], decay:float[0.1..20], predelay:float[0..200], damping:float[0..100], early:float[0..100], low_cut:float[20..1000], high_cut:float[1000..20000], width:float[0..100], dry:float[0..100], wet:float[0..100]
+- `binauralizer` (Binauralizer - Ambisonics, Special) — angle:float[0..90], head_size:float[12..24], mix:float[0..100]
+- `distortion` (Distortion, Special) — drive:float[0..48], curve:choice(Soft Clip|Hard Clip|Tube|Foldback), symmetry:float[-100..100], tone:float[500..20000], output:float[-48..12], mix:float[0..100]
+- `fill_left` (Fill Left with Right, Special)
+- `fill_right` (Fill Right with Left, Special)
+- `guitar_suite` (GuitarSuite, Special) — compressor:float[0..100], distortion:float[0..100], dist_type:choice(Soft|Hard|Fuzz), amp:choice(None|Clean Combo|British Stack|Tweed|Modern High Gain), filter:choice(None|Low Pass|High Pass|Band Pass), filter_freq:float[100..10000], filter_res:float[0..100], mix:float[0..100], output:float[-24..12]
+- `invert_a` (Invert, Special)
+- `loudness_radar` (Loudness Meter, Special) — target:float[-36..-5]
+- `mastering` (Mastering, Special) — eq_low:float[-12..12], eq_mid_freq:float[100..10000], eq_mid:float[-12..12], eq_high:float[-12..12], reverb:float[0..100], exciter:float[0..100], exciter_mode:choice(Retro|Tape|Tube), widener:float[0..200], loudness:float[0..100], output:float[-24..12]
+- `panner_ambisonics` (Panner - Ambisonics, Special) — pan:float[-180..180], tilt:float[-90..90], roll:float[-180..180]
+- `swap_channels` (Swap Channels, Special)
+- `vocal_enhancer` (Vocal Enhancer, Special) — mode:choice(Male|Female|Music)
+- `stereo_expander` (Stereo Expander, Stereo Imagery) — center_pan:float[-100..100], expand:float[0..300]
+- `stereo_width` (Stereo Width, Stereo Imagery) — width:float[0..200]
+- `pitch_shifter` (Pitch Shifter, Time and Pitch) — semitones:float[-12..12], cents:float[-100..100]
+- `balance_a` (Balance, None) — balance:float[-100..100]
+- `mute` (Mute, None) — mute:bool
+- `volume_a` (Volume, None) — bypass:bool, level:float[-96..15]
+
+## VideoTransition
+
+- `block_motion` (Block Motion, Animation) — direction:choice(From North|From East|From South|From West), blocks:float[2..32], motion_blur:float[0..100]
+- `flip_motion` (Flip Motion, Animation) — direction:choice(From North|From East|From South|From West), perspective:float[0..100], motion_blur:float[0..100]
+- `fold_motion` (Fold Motion, Animation) — direction:choice(From North|From East|From South|From West), perspective:float[0..100]
+- `pop_motion` (Pop Motion, Animation) — overshoot:float[0..100], motion_blur:float[0..100]
+- `pull_motion` (Pull Motion, Animation) — direction:choice(From North|From East|From South|From West), motion_blur:float[0..100]
+- `spin_motion` (Spin Motion, Animation) — rotation:float[0..1440], spin:choice(Clockwise|Counter-clockwise), motion_blur:float[0..100]
+- `spring_motion` (Spring Motion, Animation) — direction:choice(From North|From East|From South|From West), bounce:float[0..100], motion_blur:float[0..100]
+- `travel_motion` (Travel Motion, Animation) — direction:choice(From North|From East|From South|From West), zoom:float[0..90], motion_blur:float[0..100]
+- `additive_dissolve` (Additive Dissolve, Dissolve)
+- `blur_dissolve` (Blur Dissolve, Dissolve) — blur:float[0..400]
+- `burn_alpha` (Burn Alpha, Dissolve) — burn_color:color, softness:float[0..100], seed:float[0..9999]
+- `cross_dissolve` (Cross Dissolve, Dissolve)
+- `dip_to_black` (Dip to Black, Dissolve)
+- `dip_to_color` (Dip to Color, Dissolve) — color:color, hold:float[0..90]
+- `dip_to_white` (Dip to White, Dissolve)
+- `film_dissolve` (Film Dissolve, Dissolve)
+- `luma_fade` (Luma Fade, Dissolve) — source:choice(Outgoing|Incoming), softness:float[0..100], invert:bool
+- `morph_cut` (Morph Cut, Dissolve)
+- `mosaic_transition` (Mosaic, Dissolve) — block_size:float[0..400], dissolve:bool
+- `chaos` (Chaos, Grunge & Distort) — amount:float[0..100], seed:float[0..9999]
+- `earthquake` (Earthquake, Grunge & Distort) — shake:float[0..400], seed:float[0..9999], motion_blur:float[0..100]
+- `flicker` (Flicker, Grunge & Distort) — flickers:float[1..40], seed:float[0..9999]
+- `glass` (Glass, Grunge & Distort) — cell_size:float[0..1000], refraction:float[0..400], seed:float[0..9999]
+- `glitch` (Glitch, Grunge & Distort) — amount:float[0..100], seed:float[0..9999]
+- `grunge` (Grunge, Grunge & Distort) — scale:float[0..1000], edge_color:color, edge_width:float[0..200], seed:float[0..9999]
+- `kaleidoscope` (Kaleidoscope, Grunge & Distort) — segments:float[2..32], zoom:float[0..100]
+- `liquid_distortion` (Liquid Distortion, Grunge & Distort) — amount:float[0..500], scale:float[0..2000], seed:float[0..9999]
+- `tv_power` (TV Power, Grunge & Distort) — glow_color:color, line:float[0..50]
+- `vhs_damage` (VHS Damage, Grunge & Distort) — amount:float[0..100], seed:float[0..9999]
+- `vr_chroma_leaks` (VR Chroma Leaks, Immersive Video) — amount:float[0..100], seed:float[0..9999]
+- `vr_gradient_wipe` (VR Gradient Wipe, Immersive Video) — softness:float[0..100], invert:bool
+- `vr_iris_wipe` (VR Iris Wipe, Immersive Video) — center:point, feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `vr_light_leaks` (VR Light Leaks, Immersive Video) — amount:float[0..100], seed:float[0..9999]
+- `vr_light_rays` (VR Light Rays, Immersive Video) — center:point, amount:float[0..100]
+- `vr_mobius_zoom` (VR Mobius Zoom, Immersive Video) — zoom:float[0..100], twist:angle
+- `vr_random_blocks` (VR Random Blocks, Immersive Video) — block_size:float[0..1000], softness:float[0..100], seed:float[0..9999]
+- `vr_spherical_blur` (VR Spherical Blur, Immersive Video) — blur:float[0..400]
+- `burn_chroma` (Burn Chroma, Lights & Blurs) — amount:float[0..100]
+- `chroma_leak` (Chroma Leak, Lights & Blurs) — amount:float[0..100], seed:float[0..9999]
+- `cross_zoom` (Cross Zoom, Lights & Blurs) — center:point, strength:float[0..100]
+- `directional_blur_transition` (Directional Blur, Lights & Blurs) — angle:angle, blur:float[0..1000]
+- `flare` (Flare, Lights & Blurs) — color:color, amount:float[0..100], angle:angle
+- `flash` (Flash, Lights & Blurs) — color:color, intensity:float[0..100]
+- `glow` (Glow, Lights & Blurs) — radius:float[0..400], intensity:float[0..100]
+- `lens_blur` (Lens Blur, Lights & Blurs) — radius:float[0..200]
+- `light_leak` (Light Leak, Lights & Blurs) — color:color, amount:float[0..100], seed:float[0..9999]
+- `light_sweep` (Light Sweep, Lights & Blurs) — angle:angle, width:float[0..1000], color:color, amount:float[0..100]
+- `phosphor` (Phosphor, Lights & Blurs) — color:color, decay:float[0..100]
+- `radial_blur` (Radial Blur, Lights & Blurs) — center:point, angle:float[0..180]
+- `ray` (Ray, Lights & Blurs) — center:point, amount:float[0..100], length:float[0..100]
+- `solarize` (Solarize, Lights & Blurs) — amount:float[0..100]
+- `stripe` (Stripe, Lights & Blurs) — stripes:float[1..64], angle:angle, color:color
+- `zoom_blur` (Zoom Blur, Lights & Blurs) — center:point, strength:float[0..100]
+- `roll_3d` (3D Roll, Slide) — direction:choice(From North|From East|From South|From West), perspective:float[0..100]
+- `film_roll` (Film Roll, Slide) — direction:choice(From North|From East|From South|From West), gap:float[0..400], gap_color:color, motion_blur:float[0..100]
+- `push` (Push, Slide) — direction:choice(From North|From East|From South|From West), motion_blur:float[0..100]
+- `roll` (Roll, Slide) — direction:choice(From North|From East|From South|From West), motion_blur:float[0..100]
+- `slide` (Slide, Slide) — direction:choice(From North|From East|From South|From West), motion_blur:float[0..100]
+- `split` (Split, Slide) — orientation:choice(Horizontal|Vertical), motion_blur:float[0..100]
+- `stretch` (Stretch, Slide) — direction:choice(From North|From East|From South|From West)
+- `whip` (Whip, Slide) — direction:choice(From North|From East|From South|From West), blur:float[0..100]
+- `motion_camera` (Motion Camera, Smart Tools) — zoom:float[0..200], rotation:angle, motion_blur:float[0..100]
+- `motion_tween` (Motion Tween, Smart Tools) — scale:float[0..100]
+- `shape_dissolve` (Shape Dissolve, Smart Tools) — shape:choice(Circle|Square|Diamond|Star|Heart|Triangle|Hexagon), size:float[0..1000], softness:float[0..100], rotation:angle, order:choice(Random|Left to Right|Center Out), seed:float[0..9999]
+- `shape_flow` (Shape Flow, Smart Tools) — shape:choice(Circle|Square|Diamond|Star|Heart|Triangle|Hexagon), direction:choice(From North|From East|From South|From West), softness:float[0..200]
+- `text_animator` (Text Animator, Text) — columns:float[2..128], rows:float[1..64]
+- `typewriter` (Typewriter, Text) — columns:float[2..128], rows:float[1..64], cursor:bool
+- `spin_3d` (3D Spin, Transformers) — direction:choice(From North|From East|From South|From West), perspective:float[0..100]
+- `spinback_3d` (3D Spinback, Transformers) — direction:choice(From North|From East|From South|From West), depth:float[0..100]
+- `frame` (Frame, Transformers) — frame_width:float[0..200], frame_color:color, scale:float[10..95]
+- `louver` (Louver, Transformers) — slats:float[1..64], orientation:choice(Horizontal|Vertical)
+- `mirror_transition` (Mirror, Transformers) — direction:choice(From North|From East|From South|From West)
+- `page_peel` (Page Peel, Transformers) — corner:choice(Top Left|Top Right|Bottom Right|Bottom Left), radius:float[0..500], shadow:bool
+- `slice` (Slice, Transformers) — slices:float[1..64], angle:angle, motion_blur:float[0..100]
+- `wave` (Wave, Transformers) — direction:choice(From North|From East|From South|From West), amplitude:float[0..500], wavelength:float[0..3000]
+- `clock_wipe` (Clock Wipe, Wipe) — center:point, start:angle, feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `linear_wipe` (Linear Wipe, Wipe) — angle:angle, feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `neon_wipe` (Neon Wipe, Wipe) — angle:angle, color:color, glow:float[0..400], amount:float[0..100]
+- `panel_wipe` (Panel Wipe, Wipe) — direction:choice(From North|From East|From South|From West), panels:float[1..64], feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `plateau_wipe` (Plateau Wipe, Wipe) — angle:angle, plateaus:float[1..64], feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `radial_wipe` (Radial Wipe, Wipe) — corner:choice(Top Left|Top Right|Bottom Right|Bottom Left), feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `soft_wipe` (Soft Wipe, Wipe) — angle:angle, feather:float[0..2000]
+- `star_wipe` (Star Wipe, Wipe) — center:point, points:float[3..24], inner:float[5..100], rotation:angle, feather:float[0..2000], border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `stretch_wipe` (Stretch Wipe, Wipe) — direction:choice(From North|From East|From South|From West), stretch:float[0..2000]
+- `additive_dissolve_legacy` (Additive Dissolve (Legacy), Video Transitions)
+- `barn_doors` (Barn Doors, Video Transitions) — orientation:choice(Horizontal|Vertical), border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `center_split` (Center Split, Video Transitions)
+- `clock_wipe_legacy` (Clock Wipe (Legacy), Video Transitions)
+- `cross_dissolve_legacy` (Cross Dissolve (Legacy), Video Transitions)
+- `cross_zoom_legacy` (Cross Zoom (Legacy), Video Transitions)
+- `dip_to_black_legacy` (Dip to Black (Legacy), Video Transitions)
+- `dip_to_white_legacy` (Dip to White (Legacy), Video Transitions)
+- `film_dissolve_legacy` (Film Dissolve (Legacy), Video Transitions)
+- `inset` (Inset, Video Transitions) — corner:choice(Top Left|Top Right|Bottom Right|Bottom Left), border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `iris_box` (Iris Box, Video Transitions) — center:point, border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `iris_cross` (Iris Cross, Video Transitions) — center:point, border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `iris_diamond` (Iris Diamond, Video Transitions) — center:point, border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `iris_round` (Iris Round, Video Transitions) — center:point, border_width:float[0..200], border_color:color, antialias:choice(Off|Low|Medium|High)
+- `non_additive_dissolve` (Non-Additive Dissolve, Video Transitions)
+- `push_legacy` (Push (Legacy), Video Transitions) — direction:choice(From North|From East|From South|From West)
+- `radial_wipe_legacy` (Radial Wipe (Legacy), Video Transitions)
+- `slide_legacy` (Slide (Legacy), Video Transitions) — direction:choice(From North|From East|From South|From West)
+- `split_legacy` (Split (Legacy), Video Transitions)
+- `whip_legacy` (Whip (Legacy), Video Transitions) — direction:choice(From North|From East|From South|From West)
+- `wipe` (Wipe, Video Transitions) — direction:choice(From North|From East|From South|From West)
+- `band_slide` (Band Slide, Video Transitions)
+- `checker_wipe` (Checker Wipe, Video Transitions)
+- `cube_spin` (Cube Spin, Video Transitions)
+- `flip_over` (Flip Over, Video Transitions)
+- `gradient_wipe` (Gradient Wipe, Video Transitions) — softness:float[0..100]
+- `page_turn` (Page Turn, Video Transitions)
+- `venetian_blinds` (Venetian Blinds, Video Transitions)
+
+## AudioTransition
+
+- `constant_power` (Constant Power, Crossfade)
+- `constant_gain` (Constant Gain, Crossfade)
+- `exponential_fade` (Exponential Fade, Crossfade)

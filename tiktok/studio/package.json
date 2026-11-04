@@ -1,0 +1,21 @@
+{
+  "name": "pourtant-cest-vrai-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Studio Remotion de la chaîne TikTok « Pourtant c'est vrai »",
+  "scripts": {
+    "dev": "remotion studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/fonts": "4.0.532",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

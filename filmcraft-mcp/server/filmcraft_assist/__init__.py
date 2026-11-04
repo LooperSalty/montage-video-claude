@@ -1,0 +1,1 @@
+"""MCP compagnon de FilmCraft."""
